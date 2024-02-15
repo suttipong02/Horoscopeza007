@@ -24,7 +24,7 @@ include 'header.php';
                     </div>
                     <div class="row mt-4 justify-content-center">
                         <div class="col-xl-6 mt-2">
-                            <a href="#">คุณลืมรหัสผ่าน ?</a>
+                            <a href="register.php">คุณยังไม่ได้ลงทะเบียน ?</a>
                         </div>
                         <div class="col-xl-6">
                             <button type="submit" class="btn btn-warning text-white rounded btn-block">เข้าสู่ระบบ</button>

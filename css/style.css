@@ -2,15 +2,40 @@
 
 body {
   background-color: #2d2d37 !important;
-  font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif !important;
 }
 .card {
   border-radius: 10px !important;
 }
 
+.text-gold {
+  color: #dfbe87;
+}
+
+.btn-gold {
+  background-color: #dfbe87 !important;
+  border-radius: 30px;
+}
+
+.btn-outline-gold {
+  color: #dfbe87 !important;
+  border: 2px solid #dfbe87 !important;
+  border-radius: 30px;
+}
+
 .form-control {
   background-color: #ffffff1b;
   border: none;
+}
+
+.duduang-header {
+  background-size: cover !important;
+  background: url("https://media.discordapp.net/attachments/1182321990611243088/1207522609047146596/horoscope_tarot_background.png?ex=65dff410&is=65cd7f10&hm=ee16ba4891243ed3c2d955f289084406fd33ad94ddfa2d6969e5bd4db689976d&=&format=webp&quality=lossless&width=950&height=468");
+  height: 700px;
+}
+
+.bg-dark-2 {
+  background-color: #181b22 !important;
 }
 
 .form-control:active,
@@ -116,4 +141,110 @@ a:hover {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+}
+
+.gipsy-container {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gipsy {
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+@keyframes shuffleAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate(-200px, 5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.shuffle-start {
+  animation: shuffleAnimation 0.5s forwards;
+}
+
+.gipsy-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@keyframes shuffleCards {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(calc(-100% - 20px));
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.gipsy {
+  flex: 0 0 calc(100% / 15 - margin);
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+.gipsy img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.25rem;
+  transition: transform 0.3s, filter 0.3s;
+  position: relative;
+  filter: grayscale(0.5);
+}
+
+.gipsy:hover img {
+  transform: translateY(-10px);
+}
+
+.gipsy.selected img {
+  transform: scale(1.4) translateY(3px);
+  border-radius: 10px;
+  z-index: 10;
+  filter: grayscale(0);
+}
+
+.gipsy {
+  flex: 0 0 5%;
+  height: calc(3.4vw * 1.452);
+  background-size: cover;
+  margin: 2px;
+}
+
+@media (max-width: 1200px) {
+  .gipsy {
+    height: calc(7.5vw * 1.452);
+  }
+}
+
+@media (max-width: 768px) {
+  .gipsy {
+    height: calc(10vw * 1.452);
+  }
+}
+
+@media (max-width: 576px) {
+  .gipsy {
+    height: calc(15vw * 1.452);
+  }
+}
+
+@media (max-width: 400px) {
+  .gipsy-row {
+    flex-wrap: wrap;
+  }
+  .gipsy {
+    flex-basis: 20%;
+    height: calc(20vw * 1.452);
+  }
 }

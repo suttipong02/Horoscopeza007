@@ -23,6 +23,28 @@ include 'header.php';
                         <input type="text" id="username" name="username" required class="form-control">
                     </div>
                     <div class="mt-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="">วัน</label>
+                                <select name="" id="" class="form-control text-white">
+                                    <option value="1">21</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="">เดือน</label>
+                                <select name="" id="" class="form-control text-white">
+                                    <option value="1">มกราคม</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label for="">ปี</label>
+                                <select name="" id="" class="form-control text-white">
+                                    <option value="1">2003</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required class="form-control">
                     </div>
